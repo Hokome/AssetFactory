@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200.00002"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="checkmark.svg"
+   inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\Sprites\checkmark.png"
+   inkscape:export-xdpi="32.512001"
+   inkscape:export-ydpi="32.512001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="mm"
+     inkscape:zoom="0.52453645"
+     inkscape:cx="243.07176"
+     inkscape:cy="536.66433"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="200mm"
+     gridtolerance="10"
+     height="300mm">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1053"
+       dotted="false"
+       spacingx="1"
+       spacingy="1"
+       units="mm"
+       empspacing="100"
+       empcolor="#000000"
+       empopacity="0.50196078"
+       color="#000000"
+       opacity="0.1254902" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#1a1a1a;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 20.75662,46.721311 40,69.453119 80,30"
+       id="path2319"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#66ff66;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 120.757,146.72131 19.24338,22.73181 40,-39.45312"
+       id="path826"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\Sprites\checkmark.png"
+       inkscape:export-xdpi="65.024002"
+       inkscape:export-ydpi="65.024002" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 120.757,46.72131 19.24338,22.73181 40,-39.45312"
+       id="path824"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#ccffcc;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20.757,146.72131 19.24338,22.73181 40,-39.45312"
+       id="path828"
+       sodipodi:nodetypes="ccc" />
+  </g>
+</svg>

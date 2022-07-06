@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2deec17a1ef594949ae5c3cdd2a22f4b, type: 3}
+  m_Name: UI Confirm
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: f61edba776581db4fba8e112101c836f, type: 3}
+  volume: 1
+  pitch: 1
+  channel: {fileID: -3128070585240148410, guid: fa8894fbc69fcd04aad31035f706eaea, type: 2}

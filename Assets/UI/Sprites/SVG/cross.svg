@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200.00002"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="cross.svg"
+   inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\Sprites\cross.png"
+   inkscape:export-xdpi="32.512001"
+   inkscape:export-ydpi="32.512001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="mm"
+     inkscape:zoom="0.37090328"
+     inkscape:cx="155.02694"
+     inkscape:cy="931.50969"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="200mm"
+     gridtolerance="10"
+     height="300mm">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1053"
+       dotted="false"
+       spacingx="1"
+       spacingy="1"
+       units="mm"
+       empspacing="100"
+       empcolor="#000000"
+       empopacity="0.50196078"
+       color="#000000"
+       opacity="0.1254902" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#1a1a1a;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 20,20 80,80"
+       id="path1370"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#1a1a1a;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 80,20 20,80"
+       id="path1372"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#f9f9f9;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 120,20 60,60"
+       id="path2131"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#f9f9f9;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 180,20 120,80"
+       id="path2133"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\Sprites\path2133.png"
+       inkscape:export-xdpi="65.024002"
+       inkscape:export-ydpi="65.024002" />
+    <path
+       style="fill:none;stroke:#cc2929;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20,120 60,60"
+       id="path2162"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#cc2929;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 80,120 20,180"
+       id="path2164"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#ff8080;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 120,120 60,60"
+       id="path2166"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#ff8080;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 180,120 -60,60"
+       id="path2168"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

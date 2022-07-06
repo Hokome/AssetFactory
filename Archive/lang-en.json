@@ -1,0 +1,11 @@
+{
+    "id": "en",
+    "name": "English",
+    "enName": "English",
+    "pairs": {
+        "play_button": "Play",
+        "settings_button": "Settings",
+        "quit_button": "Quit",
+        "confirm_button": "Confirm"
+    }
+}

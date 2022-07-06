@@ -1,0 +1,11 @@
+{
+    "id": "fr",
+    "name": "Français",
+    "enName": "French",
+    "pairs": {
+        "play_button": "Jouer",
+        "settings_button": "Options",
+        "quit_button": "Quitter",
+        "confirm_button": "Confirmer"
+    }
+}
