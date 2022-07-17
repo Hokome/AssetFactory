@@ -9,6 +9,7 @@ namespace AssetFactory.UI
 	public abstract class MenuManager : MonoBehaviour
     {
 		[SerializeField] protected Menu main;
+		[SerializeField] protected bool lockCursorIfDisabled;
 
 		protected Menu currentMenu;
 		protected Stack<Menu> navigationStack = new Stack<Menu>();
@@ -100,6 +101,11 @@ namespace AssetFactory.UI
 				return;
 			currentMenu.Display(false);
 			CurrentMenu = navigationStack.Pop();
+		}
+		protected void LockCursor(bool value)
+		{
+			Cursor.visible = !value;
+			Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
 		}
 
 		protected virtual void Start()

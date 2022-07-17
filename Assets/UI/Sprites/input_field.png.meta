@@ -59,7 +59,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,89 +112,146 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: input_fiedl_ui_0
+      name: input_field
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 50, y: 50, z: 50, w: 100}
+      border: {x: 24, y: 24, z: 24, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1500047820d49a450800000000000000
-      internalID: 6100491843504439377
+      spriteID: e11bd9a30e5eeda44bfe63fa3ccb6b0f
+      internalID: -1799548655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: input_fiedl_ui_1
+      name: input_field_light
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 50, y: 50, z: 50, w: 100}
+      border: {x: 24, y: 24, z: 24, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd492c6ddc0ec1a0800000000000000
-      internalID: -6787473443258806829
+      spriteID: 1f3f7ade3f34fb242980cce9bd8e751b
+      internalID: -1821320497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: input_fiedl_ui_2
+      name: input_field_gray
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 256
-        height: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 50, y: 50, z: 50, w: 100}
+      border: {x: 24, y: 24, z: 24, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b56654d0d62180b0800000000000000
-      internalID: -5728254572681075279
+      spriteID: 43a7f90a9dbd6e54296975dea09ff29e
+      internalID: -450855611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: input_fiedl_ui_3
+      name: input_field_medium
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 50, y: 50, z: 50, w: 100}
+      border: {x: 24, y: 24, z: 24, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ffb682df4603b70800000000000000
-      internalID: 8876705904014917407
+      spriteID: 588d12df6f2e0034ba71ab94282110df
+      internalID: -1448722846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: input_field_colored
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 24, z: 24, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2708da26aa94184294b67116ba7dd99
+      internalID: 1359655181
       vertices: []
       indices: 
       edges: []
@@ -210,10 +267,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      input_fiedl_ui_2: -5728254572681075279
-      input_fiedl_ui_3: 8876705904014917407
-      input_fiedl_ui_0: 6100491843504439377
-      input_fiedl_ui_1: -6787473443258806829
+      input_field: -1799548655
+      input_field_gray: -450855611
+      input_field_colored: 1359655181
+      input_field_light: -1821320497
+      input_field_medium: -1448722846
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -38,7 +38,8 @@ namespace AssetFactory
 					if (currentMenu != null)
 						currentMenu.Display(false);
 				}
-				Cursor.visible = value;
+				if (lockCursorIfDisabled)
+					LockCursor(!value);
 				TimeStopped = value;
 			}
 		}

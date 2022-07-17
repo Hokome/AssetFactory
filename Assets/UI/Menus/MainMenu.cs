@@ -19,7 +19,7 @@ namespace AssetFactory
 		}
 		public void ShowMainMenu(bool value)
 		{
-
+			if (lockCursorIfDisabled) LockCursor(!value);
 			HUDManager.Inst.enabled = !value;
 			PauseMenu.Inst.enabled = !value;
 			//GameMenu.Inst.enabled = !value;

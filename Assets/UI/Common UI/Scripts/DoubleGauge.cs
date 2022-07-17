@@ -18,16 +18,35 @@ namespace AssetFactory.UI
 		[SerializeField] private Color subDecreaseColor;
 		[SerializeField] private float animationTime;
 		[Header("References")]
-		[SerializeField] private Slider front;
-		[SerializeField] private Slider back;
-		[SerializeField] private Image frontFill;
-		[SerializeField] private Image backFill;
+		[SerializeField] private SubGauge front;
+		[SerializeField] private SubGauge back;
 
-		private Slider sub;
+		private SubGauge main;
+		private SubGauge sub;
 
 		private LTDescr anim;
 		private bool isAnimating;
 		private bool isIncreasing;
+		private bool Increasing
+		{
+			get => isIncreasing;
+			set
+			{
+				isIncreasing = value;
+				if (value)
+				{
+					main = back;
+					sub = front;
+					back.Color = subIncreaseColor;
+				}
+				else
+				{
+					main = front;
+					sub = back;
+					back.Color = subDecreaseColor;
+				}
+			}
+		}
 
 		public float Value
 		{
@@ -41,27 +60,20 @@ namespace AssetFactory.UI
 				bool increasing = this.value > subValue;
 				if (isAnimating)
 				{
-					if (isIncreasing != increasing)
+					if (Increasing != increasing)
 						ForceUpdate();
 					LeanTween.cancel(anim.uniqueId);
 				}
-				if (increasing)
-				{
-					isIncreasing = true;
-					back.value = value;
-					sub = front;
-					backFill.color = subIncreaseColor;
-				}
-				else
-				{
-					isIncreasing = false;
-					front.value = value;
-					sub = back;
-					backFill.color = subDecreaseColor;
-				}
+				Increasing = increasing;
+				main.Value = newValue;
 
 				isAnimating = true;
-				anim = LeanTween.value(gameObject, UpdateSub, subValue, value, animationTime)
+				anim = LeanTween.value(
+					gameObject,
+					v => SubValue = v,
+					subValue,
+					value,
+					animationTime)
 					.setOnComplete(ForceUpdate);
 			}
 		}
@@ -71,7 +83,7 @@ namespace AssetFactory.UI
 			set
 			{
 				subValue = value;
-				sub.value = value;
+				sub.Value = value;
 			}
 		}
 
@@ -81,8 +93,8 @@ namespace AssetFactory.UI
 			set
 			{
 				min = value;
-				front.minValue = value;
-				back.minValue = value;
+				front.Min = value;
+				back.Min = value;
 			}
 		}
 		public float Max
@@ -91,8 +103,8 @@ namespace AssetFactory.UI
 			set
 			{
 				max = value;
-				front.maxValue = value;
-				back.maxValue = value;
+				front.Max = value;
+				back.Max = value;
 			}
 		}
 
@@ -103,72 +115,25 @@ namespace AssetFactory.UI
 			isAnimating = false;
 
 			subValue = value;
-			front.value = value;
-			back.value = value;
+			front.Value = value;
+			back.Value = value;
 		}
 
 		private void Start() => Init();
-		private void OnValidate() => Init();
+#if UNITY_EDITOR
+		private void OnValidate() => UnityEditor.EditorApplication.delayCall += Init;
+#endif
 		private void Init()
 		{
-			if (front != null)
-				front.value = value;
-			if (back != null)
-				back.value = subValue;
-			
+			if (front == null || back == null) return;
+			Increasing = Value > subValue;
+
+			front.Color = mainColor;
+			front.Value = value;
 			Min = min;
 			Max = max;
-			
-			if (frontFill != null)
-				frontFill.color = mainColor;
-			if (backFill != null)
-				backFill.color = subDecreaseColor;
+			main.Value = Value;
+			sub.Value = subValue;
 		}
-
-		private void UpdateSub(float val)
-		{
-			SubValue = val;
-		}
-
-		//Old code
-		//private Coroutine anim;
-		//private bool recalculationNeeded;
-		//private float increment;
-		//private IEnumerator Animate()
-		//{
-		//Recalculation:
-		//	float increment = value - subValue / animationTime;
-		//	if (!MathEx.SameSign(increment, this.increment))
-		//		ForceUpdate();
-		//	this.increment = increment;
-		//	recalculationNeeded = false;
-		//	if (value > subValue)
-		//	{
-		//		back.value = value;
-		//		sub = front;
-		//		backFill.color = subIncreaseColor;
-		//		while (subValue < value)
-		//		{
-		//			SubValue += increment * Time.deltaTime;
-		//			yield return null;
-		//			if (recalculationNeeded)
-		//				goto Recalculation;
-		//		}
-		//	}
-		//	else if (value < subValue)
-		//	{
-		//		front.value = value;
-		//		sub = back;
-		//		backFill.color = subDecreaseColor;
-		//		while (subValue > value)
-		//		{
-		//			SubValue += increment * Time.deltaTime;
-		//			yield return null;
-		//			if (recalculationNeeded)
-		//				goto Recalculation;
-		//		}
-		//	}
-		//	anim = null;
-		//}
 	}
 }

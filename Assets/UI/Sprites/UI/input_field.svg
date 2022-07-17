@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="300mm"
+   viewBox="0 0 200 300.00003"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="input_field.svg"
+   inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\Sprites\input_field.png"
+   inkscape:export-xdpi="16.256001"
+   inkscape:export-ydpi="16.256001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="mm"
+     inkscape:zoom="0.70710686"
+     inkscape:cx="-19.091881"
+     inkscape:cy="512.65236"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="200mm"
+     gridtolerance="10">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1053"
+       dotted="false"
+       spacingx="1"
+       spacingy="1"
+       units="mm"
+       empspacing="100"
+       empcolor="#000000"
+       empopacity="0.50196078"
+       color="#000000"
+       opacity="0.1254902" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1216"
+       width="80"
+       height="80"
+       x="10"
+       y="10"
+       ry="20" />
+    <path
+       style="fill:none;stroke:#e5e5e5;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 10,45 c 0,0 0,-20 20,-20 h 40 c 20,0 20,20 20,20"
+       id="path1778"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#cccccc;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1051"
+       width="80"
+       height="80"
+       x="10"
+       y="10"
+       ry="20"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\input_field.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4998"
+       width="80"
+       height="80"
+       x="109.99965"
+       y="10"
+       ry="20" />
+    <path
+       style="fill:none;stroke:#e5e5e5;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 109.99965,45 c 0,0 0,-20 20,-20 h 40 c 20,0 20,20 20,20"
+       id="path5000"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#a1e5e5;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5002"
+       width="80"
+       height="80"
+       x="109.99965"
+       y="10"
+       ry="20"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\input_field.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#b2b2b2;fill-opacity:1;stroke:none;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5004"
+       width="80"
+       height="80"
+       x="10"
+       y="110"
+       ry="20" />
+    <path
+       style="fill:none;stroke:#a6a6a6;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 10,145 c 0,0 0,-20 20,-20 h 40 c 20,0 20,20 20,20"
+       id="path5006"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#999999;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5008"
+       width="80"
+       height="80"
+       x="10"
+       y="110"
+       ry="20"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\input_field.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5010"
+       width="80"
+       height="80"
+       x="109.99965"
+       y="110"
+       ry="20" />
+    <path
+       style="fill:none;stroke:#e5e5e5;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 109.99965,145 c 0,0 0,-20 20,-20 h 40 c 20,0 20,20 20,20"
+       id="path5012"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#6bb2b2;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5014"
+       width="80"
+       height="80"
+       x="109.99965"
+       y="110"
+       ry="20"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\input_field.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#b2ffff;fill-opacity:1;stroke:none;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5033"
+       width="80"
+       height="80"
+       x="109.99965"
+       y="210"
+       ry="20" />
+    <path
+       style="fill:none;stroke:#a0e5e5;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 109.99965,245 c 0,0 0,-20 20,-20 h 40 c 20,0 20,20 20,20"
+       id="path5035"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#6bb2b2;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5037"
+       width="80"
+       height="80"
+       x="109.99965"
+       y="210"
+       ry="20"
+       inkscape:export-filename="D:\Dev\Unity\AssetFactory\Assets\UI\input_field.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

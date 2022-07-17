@@ -75,7 +75,7 @@ namespace AssetFactory.UI
 		}
 
 		public string header;
-		[TextArea(2, 8)]
+		[TextArea(1, 8)]
 		public string content;
 
 		public override string ToString()

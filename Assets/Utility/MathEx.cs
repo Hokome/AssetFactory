@@ -5,13 +5,15 @@ using UnityEngine;
 //Originally from AssetFactory
 public static class MathEx
 {
-    /// <summary>
-    /// Rotate a Vector by degrees on the Z axis
-    /// </summary>
-    /// <param name="v">Vector to rotate</param>
-    /// <param name="degrees">Degrees by which the Vector should be rotated</param>
-    /// <returns></returns>
-    public static Vector2 RotateVector(Vector2 v, float degrees)
+	public static Vector2 HalfVector2 => new Vector2(0.5f, 0.5f);
+
+	/// <summary>
+	/// Rotate a Vector by degrees on the Z axis
+	/// </summary>
+	/// <param name="v">Vector to rotate</param>
+	/// <param name="degrees">Degrees by which the Vector should be rotated</param>
+	/// <returns></returns>
+	public static Vector2 RotateVector(Vector2 v, float degrees)
     {
         float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
         float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);

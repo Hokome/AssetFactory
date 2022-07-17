@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73cd12fcb945b04aa91fce93323b5cc, type: 3}
+  m_Name: Input Icon Dictionary
+  m_EditorClassIdentifier: 
+  list:
+  - key: <Gamepad>/buttonNorth
+    sprite: {fileID: 21300000, guid: 973c4410ac178924db8d4966d142d63c, type: 3}
+  - key: <Gamepad>/buttonWest
+    sprite: {fileID: 21300000, guid: a1a5ae559bc0ece44b3c0b482a670022, type: 3}
+  - key: <Gamepad>/buttonEast
+    sprite: {fileID: 21300000, guid: e797513c53931fb4999bf7112e905a43, type: 3}
+  - key: <Gamepad>/buttonSouth
+    sprite: {fileID: 21300000, guid: aa31ed21ea8780147942b2ced7f83e74, type: 3}
+  - key: <Gamepad>/rightShoulder
+    sprite: {fileID: 21300000, guid: f31ef11992c2e834db2ba84d6a2df718, type: 3}
+  - key: <Gamepad>/leftShoulder
+    sprite: {fileID: 21300000, guid: 840af7d2440c30f4a9b7a939ba426372, type: 3}
+  - key: <Gamepad>/rightTrigger
+    sprite: {fileID: 21300000, guid: 3e408e99237073f41aaa83b972b39bb1, type: 3}
+  - key: <Gamepad>/leftTrigger
+    sprite: {fileID: 21300000, guid: 6a64ac8a29e99694eada101fcb07bb3d, type: 3}
+  - key: <Gamepad>/dpad/up
+    sprite: {fileID: 21300000, guid: 26513832b1f5ae04186c71a782948486, type: 3}
+  - key: <Gamepad>/dpad/left
+    sprite: {fileID: 21300000, guid: 02a884a097ed9394db0656455a54e2b3, type: 3}
+  - key: <Gamepad>/dpad/right
+    sprite: {fileID: 21300000, guid: 2c8415166a5b52c43a0638721a1410ca, type: 3}
+  - key: <Gamepad>/dpad/down
+    sprite: {fileID: 21300000, guid: ee2a363821a545f4693cd39aadecb436, type: 3}
+  - key: <Gamepad>/leftStickPress
+    sprite: {fileID: 21300000, guid: 03bb3f11e8e944246928f546cf798114, type: 3}
+  - key: <Gamepad>/rightStickPress
+    sprite: {fileID: 21300000, guid: 3b6d940e5e93f154d9cf06f3214debd4, type: 3}
+  - key: <Gamepad>/start
+    sprite: {fileID: 21300000, guid: 3377ccaae1ea37a4a9ee99d642808408, type: 3}
+  - key: <Gamepad>/select
+    sprite: {fileID: 21300000, guid: 311cc4a16db79ed41a7f3865b440e57d, type: 3}
+  - key: <Mouse>/leftButton
+    sprite: {fileID: 21300000, guid: 95919a61d9e06f5489cca5085cf5f98b, type: 3}
+  - key: <Mouse>/rightButton
+    sprite: {fileID: 21300000, guid: 42d344284d6acfc4682a87f2e9941bca, type: 3}
+  - key: <Mouse>/middleButton
+    sprite: {fileID: 21300000, guid: ec474b803ad41204385d34c8a1063c1f, type: 3}

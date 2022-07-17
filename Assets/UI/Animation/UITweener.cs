@@ -30,23 +30,5 @@ namespace AssetFactory.UI
 
 		public virtual LTDescr Animate() => Animate(forward);
 		public virtual LTDescr Animate(bool forward) => null;
-		//{
-		//	LTDescr ltdescr;
-		//	switch (animationType)
-		//	{
-		//		case AnimationType.Fade:
-		//			ltdescr = LeanTween.alphaCanvas(cg, inverted ? 0f : 1f, duration).setEase(easeType);
-		//			break;
-		//		case AnimationType.Scale:
-		//			ltdescr = LeanTween.scale(gameObject, inverted ? Vector3.zero : Vector3.one, duration).setEase(easeType);
-		//			break;
-		//		default:
-		//			Debug.LogError("Animation does not exist");
-		//			return null;
-		//	}
-		//	ltdescr.setEase(easeType);
-		//	return ltdescr.setOnComplete(OnComplete.Invoke);
-		//}
-		public void DestroyMe() => Destroy(gameObject);
 	}
 }
