@@ -11,8 +11,15 @@ namespace AssetFactory
 	[RequireComponent(typeof(Rigidbody2D))]
 	[RequireComponent(typeof(Collider2D))]
 	[RequireComponent(typeof(GroundCheck))]
-	public class PlatformerPlayer : InputSingleton<PlatformerPlayer>, IKillable
+	public class PlatformerPlayer : InputBehaviour, IKillable, ISingleton<PlatformerPlayer>
 	{
+		public static PlatformerPlayer Inst
+		{
+			get => ISingleton<PlatformerPlayer>.Inst;
+			set => ISingleton<PlatformerPlayer>.Inst = value;
+		}
+		public static bool Exists => ISingleton<PlatformerPlayer>.Exists;
+
 		[Header("Movement")]
 		[SerializeField] private float acceleration = 50f;
 		[SerializeField] private float maxSpeed = 5f;
@@ -102,6 +109,11 @@ namespace AssetFactory
 		//	}
 		//}
 
+		protected override void Awake()
+		{
+			base.Awake();
+			Inst = this;
+		}
 		private void Start()
 		{
 			FlyMode = FlyMode;

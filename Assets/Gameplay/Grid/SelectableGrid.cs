@@ -80,16 +80,16 @@ namespace AssetFactory
 		{
 			hoverHighlight = Instantiate(hoverHighlight, transform);
 			selectHighlight = Instantiate(selectHighlight, transform);
+			Hover = null;
+			Selection = null;
 		}
-		protected virtual void Update()
+		protected override void Update()
 		{
+			base.Update();
 			Vector2 mousePos = Camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 			Vector2Int hoverPos = WorldToGrid(mousePos);
 
-			//Debug.Log(hoverPos);
-
 			Hover = this[hoverPos];
-
 			if (Mouse.current.leftButton.wasPressedThisFrame)
 				LeftClick(this[hoverPos]);
 			if (Mouse.current.rightButton.wasPressedThisFrame)

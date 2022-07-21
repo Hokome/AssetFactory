@@ -10,7 +10,7 @@ namespace AssetFactory
 {
 	public delegate void InputCallback(InputContext ctx);
 	[RequireComponent(typeof(PlayerInput))]
-	public abstract class InputSingleton<T> : MonoSingleton<T> where T : InputSingleton<T>
+	public abstract class InputBehaviour : MonoBehaviour
 	{
 		private PlayerInput input;
 		/// <summary>
@@ -32,9 +32,8 @@ namespace AssetFactory
 		}
 		private Dictionary<InputAction, InputCallback> actionHandlers;
 
-		protected override void Awake()
+		protected virtual void Awake()
 		{
-			base.Awake();
 			Input = GetComponent<PlayerInput>();
 		}
 

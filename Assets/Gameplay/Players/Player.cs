@@ -8,7 +8,7 @@ namespace AssetFactory
 	[RequireComponent(typeof(PlayerInput))]
 	[RequireComponent(typeof(Rigidbody2D))]
 	[RequireComponent(typeof(Collider2D))]
-	public class Player : InputSingleton<Player>
+	public class Player : InputBehaviour
 	{
 		[SerializeField] private float acceleration = 1f;
 		[SerializeField] private float maxSpeed = 1f;

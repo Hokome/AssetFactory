@@ -10,11 +10,18 @@ namespace AssetFactory
 		[SerializeField] private Vector2 pivot = Vector2.zero;
 		private T[,] tiles;
 
-		public Vector2 Pivot => pivot;
-		public Vector2 LocalPivot => throw new NotImplementedException();
-		public Vector2 HalfSize => (Vector2)Size * 0.5f;
-		public Vector2 WorldPivot => ClipToWorld(pivot);
-
+		public Vector2 Pivot
+		{
+			get => pivot;
+			set
+			{
+				pivot = value;
+				RecalculatePivotCache();
+			}
+		}
+		public Vector2 LocalPivot { get; private set; }
+		private Vector2 GridToWorldCache { get; set; }
+		private Vector2 WorldToGridCache { get; set; }
 		/// <summary>
 		/// Recreates the array and copies its content when assigned.
 		/// </summary>
@@ -35,10 +42,10 @@ namespace AssetFactory
 					}
 				}
 				tiles = array;
+				RecalculatePivotCache();
 			}
 		}
-
-
+		
 		public T this[int x, int y] => tiles[x, y];
 		public T this[Vector2Int v]
 		{
@@ -50,35 +57,39 @@ namespace AssetFactory
 		}
 		public T this[int index] => tiles[index % Size.x, index / Size.y];
 
-//#if UNITY_EDITOR
-//		private void OnValidate()
-//		{
-//			if (!UnityEditor.EditorApplication.isPlaying) return;
-//		}
-//#endif
-		
+		//#if UNITY_EDITOR
+		//		private void OnValidate()
+		//		{
+		//			if (!UnityEditor.EditorApplication.isPlaying) return;
+		//		}
+		//#endif
+
+		protected virtual void Update()
+		{
+			if (transform.hasChanged)
+				RecalculatePivotCache();
+		}
+
 		public T CreateTile(int x, int y, T prefab) => CreateTile(new(x, y), prefab);
 		public virtual T CreateTile(Vector2Int position, T prefab)
 		{
-			Vector2 localPosition = position - LocalPivot;
-			T tile = Instantiate(prefab, localPosition, Quaternion.identity, transform);
+			T tile = Instantiate(prefab, transform);
+			tile.transform.position = GridToWorld(position);
 			tile.Initialize(position);
+			tiles[position.x, position.y] = tile;
 			return tile;
 		}
-		public Vector2 ClipToLocal(Vector2 position) => (position * HalfSize) - HalfSize;
-		public Vector2 ClipToWorld(Vector2 position) => transform.TransformPoint(ClipToLocal(position));
 
-		public Vector2 GridToWorld(Vector2Int position) => GridToWorld(position, MathEx.HalfVector2);
-		public Vector2 GridToWorld(Vector2Int position, Vector2 pivot)
+		public Vector2 ClipToLocal(Vector2 clip) => ((clip + Vector2.one) / 2) * Size;
+		public Vector2 GridToWorld(Vector2Int position)
 		{
-			Vector2 worldPosition = transform.TransformPoint(position - LocalPivot);
-			return worldPosition + ClipToWorld(pivot);
+			Vector2 tpos = transform.TransformPoint(position + MathEx.HalfVector2);
+			return tpos + GridToWorldCache;
 		}
 		public Vector2Int WorldToGrid(Vector2 position)
 		{
-			position = transform.InverseTransformPoint(position);
-			position -= WorldPivot;
-			return Vector2Int.FloorToInt(position);
+			Vector2 c = (Vector2)transform.InverseTransformPoint(position) + WorldToGridCache;
+			return Vector2Int.FloorToInt(c);
 		}
 		public bool InRange(Vector2Int position) 
 			=> position.x >= 0 && position.x < Size.x
@@ -107,6 +118,13 @@ namespace AssetFactory
 					yield return tiles[x, y];
 				}
 			}
+		}
+
+		private void RecalculatePivotCache()
+		{
+			LocalPivot = ClipToLocal(pivot);
+			GridToWorldCache = transform.position - transform.TransformPoint(LocalPivot);
+			WorldToGridCache = transform.position + transform.InverseTransformPoint(LocalPivot);
 		}
 	}
 }
