@@ -11,6 +11,19 @@ namespace AssetFactory
 		[SerializeField] private Vector2 size = new Vector2(2f, 2f);
 		[SerializeField] float borderOffset = 0f;
 
+		public Vector2 Size
+		{
+			get => size;
+			set
+			{
+				size = value;
+				if (Application.isPlaying)
+					Set();
+				else
+					EditorApplication.delayCall += Set;
+			}
+		}
+
 		void Start()
 		{
 			Set();
@@ -18,7 +31,7 @@ namespace AssetFactory
 #if UNITY_EDITOR
 		private void OnValidate()
 		{
-			EditorApplication.delayCall += () => Set();
+			EditorApplication.delayCall += Set;
 		}
 #endif
 		void Set()

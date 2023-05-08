@@ -1,4 +1,5 @@
 using AssetFactory.UI;
+using System;
 using UnityEngine;
 
 //Originally from AssetFactory
@@ -12,10 +13,14 @@ namespace AssetFactory
 			DontDestroyOnLoad(gameObject);
 		}
 
-		public void StartGame(SceneReference scene) => StartGame(scene);
-		public void StartGame(string sceneName)
+		public void StartGame(string sceneName) => StartGame(sceneName, null);
+		public void StartGame(string sceneName, Action callback)
 		{
-			SceneTransitioner.Inst.LoadScene(sceneName, () => ShowMainMenu(false));
+			SceneTransitioner.Inst.LoadScene(sceneName, () =>
+			{
+				ShowMainMenu(false);
+				callback?.Invoke();
+			});
 		}
 		public void ShowMainMenu(bool value)
 		{

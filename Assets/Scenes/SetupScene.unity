@@ -5062,11 +5062,11 @@ RectTransform:
   m_Father: {fileID: 125547198}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 870, y: 821}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 5}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1346804911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5192,7 +5192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8071385592643562197, guid: 77e1620307173a94da95d349f48e20d9, type: 3}
+  m_Sprite: {fileID: -76449671, guid: 26087a04fee4b1c48b2c27f2d316de2f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6597,7 +6597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1782630901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4773d59310e02ba4bbc878f089d54caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 092a86a700a39da439cf658e6cd8a073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1314093116}
@@ -6611,7 +6611,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1782630901}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74ed955dda3dc96458b8e7db5259d5c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d6199bf62c70e44fb4ff909dcae9788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 951812064}
@@ -6629,6 +6629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -6771,7 +6772,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1882309482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ec8a1186876c74c9cb86be2854db78, type: 3}
+  m_Script: {fileID: 11500000, guid: 08b1e32337214874497e2043098721d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!225 &1882309488
