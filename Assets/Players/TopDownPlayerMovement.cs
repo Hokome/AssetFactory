@@ -23,6 +23,27 @@ namespace AssetFactory
             Rigidbody = GetComponent<Rigidbody2D>();
         }
 
+        private void FixedUpdate()
+        {
+            Rigidbody.velocity += _acceleration * Time.fixedDeltaTime * MoveInput;
+            float currentSpeed = Rigidbody.velocity.magnitude;
+            if (MoveInput == Vector2.zero)
+            {
+                if (currentSpeed <= _velocitySnapThreshold)
+                {
+                    Rigidbody.velocity = Vector2.zero;
+                }
+            }
+            if (Vector2.Dot(MoveInput, Rigidbody.velocity) < 0.001f)
+            {
+                Rigidbody.velocity -= _deceleration * Time.fixedDeltaTime * Rigidbody.velocity;
+            }
+            if (currentSpeed > _maxSpeed)
+            {
+                Rigidbody.velocity *= _maxSpeed / currentSpeed;
+            }
+        }
+
         public void SetMoveInput(InputContext ctx)
         {
             MoveInput = ctx.ReadValue<Vector2>();
