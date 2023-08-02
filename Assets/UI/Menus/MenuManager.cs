@@ -29,8 +29,13 @@ namespace AssetFactory.UI
         {
             DontDestroyOnLoad(gameObject);
             _eventSystem = GetComponent<EventSystem>();
+            if (_eventSystem == null)
+            {
+                Debug.LogError("Event system is not present on this object", this);
+            }
             yield return null;
-            OpenMenuSingle(_firstMenu);
+            if (_firstMenu != null)
+                OpenMenuSingle(_firstMenu);
         }
 
         /// <summary>

@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 0a79624f5ea6b6d40800922b24084c1e, type: 3}
   m_Name: Initializer
   m_EditorClassIdentifier: 
+  initializeOnSceneLoad:
+  - {fileID: 4762306623283468484, guid: d2c72a378028e0a40a57a4dffbefeff6, type: 3}
