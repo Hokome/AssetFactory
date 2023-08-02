@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GridScene.unity
     guid: e0425acd987fe574fbf3210591c82654
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: d5ea934991aa69a4a8433777d9702822, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 5b28633df1dcb3c4dbe4953785525970, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 566ed1bf8101a0d4fb61db31515c64a0, type: 2}
     com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: b72c9f3ba230c5b4aa8d0f6fe2d7d8f7, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 4984b4f9bc4fd404faea43d338486bca, type: 2}
