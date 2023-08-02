@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AssetFactory.Legacy.UI
 {
-    public class MenuSingleton<T> : MenuManager, ISingleton<T> where T : MenuSingleton<T>
+    public class MenuSingleton<T> : Legacy.UI.MenuManager, ISingleton<T> where T : MenuSingleton<T>
     {
         public static T Inst => ISingleton<T>.Inst;
         public static bool Exists => ISingleton<T>.Exists;

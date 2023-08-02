@@ -7,7 +7,7 @@ namespace AssetFactory.Legacy.UI
 {
     public class SubMenu : Menu
     {
-        protected static MenuManager CurrentMenu => PauseMenu.IsPaused ? PauseMenu.Inst : MainMenu.Inst;
+        protected static Legacy.UI.MenuManager CurrentMenu => PauseMenu.IsPaused ? PauseMenu.Inst : MainMenu.Inst;
         public bool BackEnabled
         {
             set => CurrentMenu.BackEnabled = value;

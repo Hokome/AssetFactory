@@ -6,7 +6,7 @@ using UnityEngine;
 //Originally from AssetFactory
 namespace AssetFactory.Legacy
 {
-    public class GameMenu : MenuManager
+    public class GameMenu : Legacy.UI.MenuManager
     {
         public static GameMenu Inst { get; private set; }
 
