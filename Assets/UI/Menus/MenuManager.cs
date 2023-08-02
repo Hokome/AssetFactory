@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace AssetFactory.UI
 {
@@ -9,6 +11,8 @@ namespace AssetFactory.UI
     /// </summary>
     public class MenuManager : MonoSingleton<MenuManager>
     {
+        [SerializeField] private Menu _firstMenu;
+
         /// <summary>
         /// The currently open menu
         /// </summary>
@@ -18,8 +22,16 @@ namespace AssetFactory.UI
         /// </summary>
         public MenuTransition CurrentTransition { get; private set; }
 
+        private EventSystem _eventSystem;
         private Stack<Menu> _menuStack = new Stack<Menu>();
 
+        private IEnumerator Start()
+        {
+            DontDestroyOnLoad(gameObject);
+            _eventSystem = GetComponent<EventSystem>();
+            yield return null;
+            OpenMenuSingle(_firstMenu);
+        }
 
         /// <summary>
         /// Opens a menu without tracking the previous ones. Also clears the current menu stack. Uses default transition.
@@ -33,7 +45,10 @@ namespace AssetFactory.UI
         /// <param name="transition">Transition animation used</param>
         public void OpenMenuSingle(Menu menu, MenuTransition transition)
         {
+            if (CurrentTransition != null) ThrowAnimationInProgressException();
+            _menuStack.Clear();
 
+            OpenMenu(menu, transition);
         }
         /// <summary>
         /// Opens a menu and stacks the previous one for backtracking. Uses default transition.
@@ -47,7 +62,31 @@ namespace AssetFactory.UI
         /// <param name="transition">Transition animation used</param>
         public void OpenMenuTracked(Menu menu, MenuTransition transition)
         {
+            if (CurrentTransition != null) ThrowAnimationInProgressException();
+            _menuStack.Push(CurrentMenu);
 
+            OpenMenu(menu, transition);
+        }
+
+        private void OpenMenu(Menu menu, MenuTransition transition)
+        {
+            CurrentTransition = transition;
+
+            transition.SetMenus(CurrentMenu, menu);
+            transition.StartTransition(FinalizeTransition);
+        }
+
+        private void FinalizeTransition(Menu menu)
+        {
+            CurrentTransition = null;
+            CurrentMenu = menu;
+            GameObject selection = menu.Display(true);
+            _eventSystem.SetSelectedGameObject(selection);
+        }
+
+        private void ThrowAnimationInProgressException()
+        {
+            throw new InvalidOperationException("Menu transition is already in progress.");
         }
     }
 }
