@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7382770378253888011}
   - component: {fileID: 7382770378253888010}
   - component: {fileID: 7382770378253888005}
-  - component: {fileID: 5327247751317043303}
   m_Layer: 5
   m_Name: Button (Base)
   m_TagString: Untagged
@@ -122,18 +121,3 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5327247751317043303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7382770378253888007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48e113167e21b47419752d97ce0244a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverSound: {fileID: 11400000, guid: 4f0e405370975ca4781b9ad2d0bea399, type: 2}
-  selectSound: {fileID: 11400000, guid: 4f0e405370975ca4781b9ad2d0bea399, type: 2}
-  clickSound: {fileID: 11400000, guid: bc891f097c4d78c4b85c80f59decc838, type: 2}
