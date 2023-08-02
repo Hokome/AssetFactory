@@ -10,8 +10,10 @@ namespace AssetFactory.UI
     /// </summary>
     public class MenuTransition
     {
+        public static readonly MenuTransition defaultTransition = new MenuTransition();
+
         /// <summary>
-        /// 
+        /// Sets the menus of the transition
         /// </summary>
         /// <param name="previous"></param>
         /// <param name="next"></param>
@@ -43,6 +45,7 @@ namespace AssetFactory.UI
         protected void EndTransition()
         {
             callback(Next);
+            SetMenus(null, null);
         }
     }
 }
