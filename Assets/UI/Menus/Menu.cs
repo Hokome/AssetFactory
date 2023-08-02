@@ -8,6 +8,7 @@ namespace AssetFactory.UI
     [RequireComponent(typeof(CanvasGroup))]
     public class Menu : MonoBehaviour
     {
+        [SerializeField] private GameObject _firstSelection;
         [SerializeField] private UnityEvent _onDisplay;
         [SerializeField] private UnityEvent _onHide;
 
@@ -19,18 +20,21 @@ namespace AssetFactory.UI
             _canvasGroup.Display(false);
         }
 
-        public void Display(bool show)
+        /// <returns>First selection</returns>
+        public GameObject Display(bool show)
         {
             _canvasGroup.interactable = _canvasGroup.blocksRaycasts = show;
             if (show)
             {
                 _canvasGroup.alpha = 1f;
                 _onDisplay.Invoke();
+                return _firstSelection;
             }
             else
             {
                 _canvasGroup.alpha = 0f;
                 _onHide.Invoke();
+                return null;
             }
         }
     }
