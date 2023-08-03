@@ -16,6 +16,16 @@ namespace AssetFactory
 
         public Action Execute { get; }
         public Func<bool> Predicate { get; }
+
+        public bool TryExecute()
+        {
+            bool predicate = Predicate.Invoke();
+
+            if (predicate)
+                Execute.Invoke();
+
+            return predicate;
+        }
     }
     public class PredicateAction<T>
     {
@@ -28,5 +38,15 @@ namespace AssetFactory
 
         public Action<T> Execute { get; }
         public Predicate<T> Predicate { get; }
+
+        public bool TryExecute(T arg)
+        {
+            bool predicate = Predicate.Invoke(arg);
+
+            if (predicate)
+                Execute.Invoke(arg);
+
+            return predicate;
+        }
     }
 }
