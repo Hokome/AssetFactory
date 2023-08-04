@@ -21,6 +21,7 @@ namespace AssetFactory.UI
         /// The transition in progress. Null if there is currently no transition.
         /// </summary>
         public MenuTransition CurrentTransition { get; private set; }
+        public bool IsInMenu => CurrentMenu != null;
 
         private EventSystem _eventSystem;
         private Stack<Menu> _menuStack = new Stack<Menu>();
