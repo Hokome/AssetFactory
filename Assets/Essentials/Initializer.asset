@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initializeOnSceneLoad:
   - {fileID: 4762306623283468484, guid: d2c72a378028e0a40a57a4dffbefeff6, type: 3}
+  initializeOnSceneLoad: []
