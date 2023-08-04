@@ -36,6 +36,7 @@ namespace AssetFactory.UI
         }
         protected virtual void StartTransition()
         {
+            Previous.Display(false);
             EndTransition();
         }
         public virtual void CancelTransition()

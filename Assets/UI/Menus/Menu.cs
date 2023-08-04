@@ -9,9 +9,12 @@ namespace AssetFactory.UI
     public class Menu : MonoBehaviour
     {
         [SerializeField] private GameObject _firstSelection;
+
+        [Tooltip("Does the menu hide completely if cancel input is pressed and it is the last menu in the stack?")]
+        public bool hideOnEscape;
+
         [SerializeField] private UnityEvent _onDisplay;
         [SerializeField] private UnityEvent _onHide;
-
         private CanvasGroup _canvasGroup;
 
         private void Awake()
@@ -36,6 +39,10 @@ namespace AssetFactory.UI
                 _onHide.Invoke();
                 return null;
             }
+        }
+        public void Back()
+        {
+            MenuManager.Inst.TryBack();
         }
     }
 }

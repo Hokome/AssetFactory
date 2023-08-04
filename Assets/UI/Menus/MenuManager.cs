@@ -25,17 +25,22 @@ namespace AssetFactory.UI
         private EventSystem _eventSystem;
         private Stack<Menu> _menuStack = new Stack<Menu>();
 
-        private IEnumerator Start()
+        private void Start()
         {
             DontDestroyOnLoad(gameObject);
-            _eventSystem = GetComponent<EventSystem>();
-            if (_eventSystem == null)
+            if (!TryGetComponent(out _eventSystem))
             {
                 Debug.LogError("Event system is not present on this object", this);
+                return;
             }
-            yield return null;
+
             if (_firstMenu != null)
                 OpenMenuSingle(_firstMenu);
+
+            if (TryGetComponent(out CancelManager cancelManager))
+            {
+                cancelManager.AddAction(new PredicateAction(Back, CanBack), 20);
+            }
         }
 
         /// <summary>
@@ -55,6 +60,7 @@ namespace AssetFactory.UI
 
             OpenMenu(menu, transition);
         }
+
         /// <summary>
         /// Opens a menu and stacks the previous one for backtracking. Uses default transition.
         /// </summary>
@@ -71,6 +77,22 @@ namespace AssetFactory.UI
             _menuStack.Push(CurrentMenu);
 
             OpenMenu(menu, transition);
+        }
+
+
+        public void TryBack()
+        {
+            if (CanBack())
+                Back();
+        }
+        private bool CanBack()
+        {
+            return _menuStack.Count > 0;
+        }
+        private void Back()
+        {
+            Menu previous = _menuStack.Pop();
+            OpenMenu(previous, MenuTransition.defaultTransition);
         }
 
         private void OpenMenu(Menu menu, MenuTransition transition)

@@ -11,7 +11,7 @@ namespace AssetFactory
 {
     public class CancelManager : MonoSingleton<CancelManager>
     {
-        private List<Callback> _callbacks;
+        private List<Callback> _callbacks = new();
 
         private InputSystemUIInputModule _inputModule;
 
